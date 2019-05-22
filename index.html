@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Python Crash Course</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="container">
+
+    <nav id="navbar">
+      <header id="header">
+        <a href="#Python_Crash_Course" class="nav-link">Python Crash Course</a>
+      </header>
+      <div>
+        <a href="#Explaination_of_the_Syntax" class="nav-link">Explaination of the Syntax</a>
+      </div>
+      <div>
+        <a href="#Functions" class="nav-link">Functions</a>
+      </div>
+      <div>
+        <a href="#Lists" class="nav-link">Lists</a>
+      </div>
+      <div>
+        <a href="#For_Loops" class="nav-link">For Loops</a>
+      </div>
+      <div>
+        <a href="#If_Statements" class="nav-link">If Statements</a>
+      </div>
+      <div>
+        <a href="#While_Loops" class="nav-link">While Loops</a>
+      </div>
+      <div>
+        <a href="#Strings" class="nav-link">Strings</a>
+      </div>
+      <div>
+        <a href="#Comments" class="nav-link">Comments</a>
+      </div>
+      <div>
+        <a href="#And_and_Or" class="nav-link">And and Or</a>
+      </div>
+    </nav>
+  
+    <main id="main-doc">
+  
+      <section class="main-section" id="Python_Crash_Course">
+          <header>Python Crash Course</header>
+          <p>This is a crash course on steroids. It assumes you already know another language...or two...and builds off your previous knowledge. No point in reading through a 1-inch-thick book that spends most of the time explaining concepts you already know from another language. </p>
+          <p>Good things about python:</p>
+          <ul>
+            <li>Clean syntax</li>
+            <li>Fast</li>
+            <li>Comprehensive</li>
+          </ul>
+      </section>
+  
+      <section class="main-section" id="Explaination_of_the_Syntax">
+        <header>Explaination of the Syntax</header>
+        <p>Most languages use curly braces to group pieces of code. Like everything in a for loop will be surrounded by a { and a }. Not in Python. Indention is the key. Everything on the same indention level is part of the same group of code.</p>
+        <ul>
+          <li>
+            C/Java/whatnot
+            <pre>
+              <code>
+  for (loop stuff)
+  {
+      weeee;
+      fun;
+  }
+  this_isnt_part_of_the_loop();</code>
+            </pre>
+          </li>
+          <li>
+            Python
+            <pre>
+              <code>
+  for loop stuff:
+    weee
+    fun
+  this_isnt_part_of_the_loop()</code>
+            </pre>
+          </li>
+        </ul>
+        <p>Each statement is (usually) on its own line whereas a semicolon is used to delimit lines in most other programming language syntaxes.</p>
+      </section>
+  
+      <section class="main-section" id="Functions">
+        <header>Functions</header>
+        <p>Functions are defined using the def statment. It goes like this...</p>
+        <pre>
+          <code>
+  def functionname(parameter1, parameter2):
+    code goes here
+    and here 
+    etc.</code>
+        </pre>
+        <p>And you can have more indentions under a def in the same way you would have used curly braces before...</p>
+        <pre>
+          <code>
+  def foo():
+    do stuff
+    do more stuff
+    for loop time:
+      this is part of the loop
+      so is this
+    but this is not, this is just part of the rest of the function</code>
+        </pre>
+      </section>
+  
+      <section class="main-section" id="Lists">
+        <header>Lists</header>
+        <p>Lists are very versatile.</p>
+        <pre>
+          <code>
+  shopping_list = ["bread","milk","hamster brains"]</code>
+        </pre>
+        <p>then if you want to add an item to the list...</p>
+        <pre>
+          <code>
+  shopping_list = shopping_list + ["turnips"]</code>
+        </pre>
+        <p>If you want to access just one item in that list you can do it like this...</p>
+        <pre>
+          <code>
+  shopping_list[0]</code>
+        </pre>
+        <p>That's the first item in the list. shopping_list[1] would be the 2nd, etc.
+  
+            If you want a range of items in the list you can do that with colon magic...
+            shopping_list[0:3] is the first 3 items in the list. The way it works is the first number is where you want to start, and the second number is where you want to end (not how many you want). It goes up to but not including the 2nd number.
+            
+            Lists do not all have to contain the same type of data. It's ok to mix strings and numbers and objects and nested lists, etc.
+            </p>
+      </section>
+  
+      <section class="main-section" id="For_Loops">
+        <header>For Loops</header>
+        <p>This is the biggest change from most languages. Traditionally, you have a variable and increment it until some condition is false. With for loops in Python, you have a list and a variable and then the interpreter goes through each item in the list making the variable equal to each one as it goes...</p>
+        <pre>
+          <code>
+  for thingy in shopping_list:
+    buy(thingy)</code>
+        </pre>
+        <p>there's a loop (assuming we're using the same shopping list from earlier)
+  
+            If you want a list of numbers that go from x to y, here's how you do that:</p>
+        <pre>
+          <code>
+  list_of_nums = range(x, y + 1)</code>
+        </pre>
+        <p>then list of nums will be a list of numbers...in that range. It always starts at the first number and goes up to (but not including) the 2nd number. That's what that + 1 thing is in there for.</p>
+      </section>
+  
+      <section class="main-section" id="If_Statements">
+        <header>If Statements</header>
+        <pre>
+          <code>
+  if some condition:
+    do this</code>
+        </pre>
+        <p>Simple enough.</p>
+        <pre>
+          <code>
+  if x > 4:
+    print "OMG, x must be HUGE!"</code>
+        </pre>
+        <p>Then there's else:</p>
+        <pre>
+          <code>
+  if x > 4:
+    print "OMG, x must be HUGE!"
+  else:
+    print "x ain't nuttin'"</code>
+        </pre>
+        <p>else if's are denoted by elif's</p>
+        <pre>
+          <code>
+  if x > 4:
+    print "OMG, x must be HUGE!"
+  elif x == 4:
+    print "x is four"
+  else:
+    print "x is tiny"</code>
+        </pre>
+      </section>
+  
+      <section class="main-section" id="While_Loops">
+        <header>While Loops</header>
+        <p>While loops look just like if's and work like how you would imagine them</p>
+        <pre>
+          <code>
+  while condition:
+    do this</code>
+        </pre>
+      </section>
+  
+      <section class="main-section" id="Strings">
+        <header>Strings</header>
+        <p>Strings are concatenated with + signs</p>
+        <pre>
+          <code>
+  greeting = "Hello, " + "World!"</code>
+        </pre>
+        <p>== and = are just like most languages</p>
+        <pre>
+          <code>
+  foo = "yo"
+  if (foo == "yo"):
+      print "foo is yo"</code>
+        </pre>
+      </section>
+  
+      <section class="main-section" id="Comments">
+        <header>Comments</header>
+        <p>Comments are done with a #.</p>
+        <pre>
+          <code>
+  print "this is some code" #this line prints stuff</code>
+        </pre>
+      </section>
+  
+      <section class="main-section" id="And_and_Or">
+        <header>And and Or</header>
+        <p>There are no && or ||, it's just "and" and "or"</p>
+        <pre>
+          <code>
+  if (x == 2) and (y > 5):
+    do_stuff()</code>
+        </pre>
+        <p><a id="reference" href="https://nerdparadise.com/programming/python4minutes/" target="_blank">Reference</a></p>
+      </section>
+  
+    </main>
+
+  </div>
+
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>

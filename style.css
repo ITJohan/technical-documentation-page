@@ -1,0 +1,70 @@
+body {
+	margin: 0;
+  overflow-x: hidden;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+header {
+  font-weight: 700;
+  font-size: 1.4em;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+pre {
+  background: #EEE;
+  border-radius: 10px;
+  overflow: auto;
+}
+
+
+.nav-box:hover {
+  background: #eee;
+}
+
+.nav-link {
+  border-bottom: 2px solid #999;
+	display: block;
+  padding: 5px;
+  text-decoration: none;
+	color: black;
+}
+
+.nav-link:hover {
+  background: #EEE;
+}
+
+#reference {
+  color: black;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 50px;
+  display: block;
+  text-align: center;
+}
+
+#navbar {
+	position: fixed;
+	width: 270px;
+}
+
+#main-doc {
+  margin-left: 270px;
+  padding: 50px;
+	border-left: 2px solid #999;
+}
+
+
+@media screen and (max-width: 600px) {
+	#navbar {
+		position: relative;
+		width: 100%;
+	}
+
+	#main-doc {
+		margin-left: 0;
+		border-left: 0;
+	}
+}
